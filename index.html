@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Temperature Data</title>
+    <title>Live Temperature</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4"></script> <!-- Time adapter -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script> <!-- Chart.js time adapter -->
     <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Live Temperature Data</h1>
+    <h1>Live Temperature</h1>
     <p id="temperature">Loading...</p>
-    <p id="timestamp">Last updated: --</p>
+
+    <h2>Past 12 Hours</h2>
+    <canvas id="temperatureChart"></canvas> <!-- Graph -->
 </body>
 </html>
