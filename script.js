@@ -3,19 +3,11 @@ async function getTemperatureData() {
 
     try {
         const response = await fetch(firebaseUrl);
-        const data = await response.json();
-        
-        let latestTimestamp = 0;
-        let latestTemperature = null;
+        const data = await response.json(); 
 
-        // Find the latest recorded temperature
-        for (let timestamp in data) {
-            let entry = data[timestamp];
-            if (entry.timestamp > latestTimestamp) {
-                latestTimestamp = entry.timestamp;
-                latestTemperature = entry.temperature;
-            }
-        }
+        // Access temperature and timestamp directly
+        let latestTemperature = data.temperature;
+        let latestTimestamp = data.timestamp;
 
         // Convert timestamp to readable format
         let formattedTime = new Date(latestTimestamp * 1000).toLocaleString();
@@ -27,6 +19,6 @@ async function getTemperatureData() {
     }
 }
 
-// Fetch data immediately and update every 15 seconds
+// Fetch immediately and update every 15 seconds
 getTemperatureData();
 setInterval(getTemperatureData, 15000);
