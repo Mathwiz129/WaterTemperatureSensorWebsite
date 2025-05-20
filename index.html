@@ -6,15 +6,18 @@
     <title>Live Temperature</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4"></script> <!-- Time adapter -->
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script> <!-- Chart.js time adapter -->
-    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
 </head>
 <body>
     <h1>Live Temperature</h1>
     <p id="temperature">Loading...</p>
 
     <h2>Past 12 Hours</h2>
-    <canvas id="temperatureChart"></canvas> <!-- Graph -->
+    <div class="chart-container">
+        <canvas id="temperatureChart"></canvas>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>

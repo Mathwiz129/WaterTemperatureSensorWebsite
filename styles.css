@@ -3,15 +3,15 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 50px auto;
-    background-color: #121212; /* Dark background */
-    color: #d4ffd4; /* Light green text */
+    background-color: #121212;
+    color: #d4ffd4;
 }
 
 /* Header Styling */
 h1 {
-    color: #28a745; /* Green */
+    color: #28a745;
     font-size: 2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Temperature Display Box */
@@ -23,37 +23,13 @@ h1 {
     padding: 15px;
     border-radius: 8px;
     display: inline-block;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6); /* Shadow effect */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* Chart Container */
-#temperatureChart {
-    max-width: 600px;
-    max-height: 300px;
+.chart-container {
+    width: 95%;
+    max-width: 1000px;
+    height: 500px; /* ✅ Increased height */
     margin: auto;
-    display: block;
-    background: #1a1a1a; /* Dark box */
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6); /* Shadow effect */
-}
-
-/* Section Titles */
-h2 {
-    color: #28a745; /* Green */
-    margin-top: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Soft shadow */
-}
-
-/* Center Alignment */
-canvas {
-    max-width: 600px;
-    height: 300px;
-    margin: auto;
-}
-
-/* Add Hover Effect */
-#temperature:hover {
-    background: #333;
-    transition: 0.3s ease-in-out;
 }
